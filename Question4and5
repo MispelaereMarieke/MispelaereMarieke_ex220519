@@ -1,0 +1,17 @@
+
+
+CREATE database bioinf_exam;
+use bioinf_exam;
+
+QUESTION 4
+SELECT gene_name, (seq_region_end-seq_region_start+1) as len FROM gene ORDER BY len LIMIT 1;
+
+Answer: gene: TRDD1, len: 8
+
+
+QUESTION 5
+SELECT chromosome, COUNT(*) FROM gene WHERE description LIKE '%cancer%'GROUP BY chromosome ORDER by COUNT(*) DESC LIMIT 1 OFFSET 1;
+Answer: chromosome 9
+
+FROM gene WHERE chromosome = 9 JOIN transcript ON transcript.gene_id=gene.gene_id JOIN exon_transcript ON exon_transcript.exon_id=transcript.transcript_id JOIN exon ON exon.exon_id=exon_transcript.exon_id;
+
