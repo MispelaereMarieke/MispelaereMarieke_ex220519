@@ -1,0 +1,4 @@
+
+Perform a GET with content in fasta format
+curl 'https://rest.ensembl.org/sequence/region/zebrafish/MYCN1..100:1 -H 'Content-type:text/x-fasta'
+
